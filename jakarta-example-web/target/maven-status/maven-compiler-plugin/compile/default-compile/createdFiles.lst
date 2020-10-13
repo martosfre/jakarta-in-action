@@ -1,0 +1,5 @@
+com/matoosfe/security/SecurityConfiguration.class
+com/matoosfe/beans/LoginBean$1.class
+com/matoosfe/beans/LoginBean.class
+com/matoosfe/beans/EmployeeBean.class
+com/matoosfe/security/MemoryIdentityStore.class

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	<title>JAKARTA IN ACTION</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-brand">JAKARTA IN ACTION</div>
+		</div>
+		<h:form>
+			<h:panelGrid columns="3"
+				styleClass="table table-bordered table-striped">
+				<f:facet name="header">
+					<h:outputLabel value="Credentials" />
+				</f:facet>
+				<h:outputLabel value="Username:" for="txtUsu" />
+				<h:inputText id="txtUsu" value="#{loginBean.userName}" />
+				<h:message errorClass="alert alert-danger" for="txtUsu" />
+				<h:outputLabel value="Password" for="txtPas" />
+				<h:inputText id="txtPas" value="#{loginBean.password}" />
+				<h:message errorClass="alert alert-danger" for="txtPas" />
+			</h:panelGrid>
+			<br></br>
+			<h:commandButton value="Sign In" action="#{loginBean.validateUser}"
+				styleClass="btn btn-primary" />
+			<br></br>
+			<br></br>
+			<h:messages globalOnly="true" infoClass="alert alert-success"
+				errorClass="alert alert-danger" />
+			<br></br>
+		</h:form>
+	</div>
+</h:body>
+</html>
+
